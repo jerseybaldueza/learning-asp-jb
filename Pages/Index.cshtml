@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class=" display-4">Jersey's Crafts</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building website using  Asp.net Core</a></p>
+</div>
+<div class="card-columns">
+    @foreach (var product in Model.Products)
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@product.Image'); height:330px; background-size:cover;">
+                                                                     <!--Solution to issue img does not appear above -->
+
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@product.Title</h5>
+            </div>
+        </div>
+    }
+</div>
